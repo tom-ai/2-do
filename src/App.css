@@ -1,17 +1,42 @@
 .body {
-  text-align: center;
-  font-family: 'Roboto Mono', monospace;
+	text-align: center;
+	font-family: "Roboto Mono", monospace;
 }
 
 .list-container {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
 }
 
 .list-div {
-  border: 2px solid black;
-  height: 400px;
-  width: 400px;
-  margin: 40px;
+	border: 2px solid black;
+	height: 400px;
+	width: 400px;
+	margin: 40px;
+}
+
+.input-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.input-text-box {
+	height: 40px;
+	padding: 0px;
+	margin-left: 10px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+button {
+	width: 40px;
+	border: 2px solid black;
+}
+
+input {
+	width: 400px;
+	border: 2px solid black;
+	padding-right: 5px;
 }

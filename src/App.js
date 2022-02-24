@@ -1,49 +1,28 @@
-import './App.css';
-import { useState } from 'react';
-
+import "./App.css";
+import Header from "./components/Header";
+import PendingList from "./components/Pending-List";
+import CompletedList from "./components/Completed-List";
+import Input from "./components/Input";
+import { useState } from "react";
+const form = document.querySelector("form");
 
 function App() {
-  return (
-    <div className="body">
-      <Header />
-      <container className="list-container">
-        <PendingList />
-        <CompletedList />
-      </container>
-    </div>
-  );
+	return (
+		<div className="body">
+			<Header />
+			<div className="list-container">
+				<PendingList />
+				<CompletedList />
+			</div>
+			<div className="input-container">
+				<Input />
+			</div>
+		</div>
+	);
 }
 
 export default App;
 
-const Header = () => {
-  return (
-    <div>
-      <h1>2-Do</h1>
-      <p>A simple to-do app</p>
-    </div>
-  )
-}
-
-const PendingList = () => {
-  return (
-    <div className='list-div'>
-      <h3>2-Do's</h3>
-
-    </div>
-  )
-}
-
-const CompletedList = () => {
-  return (
-    <div className='list-div'>
-      <h3>Completed 2-Do's</h3>
-    </div>
-  )
-}
-
-const input = () => {
-  return (
-    
-  )
-}
+// form.addEventListener("submit", (event) => {
+// 	console.log(event);
+// });
