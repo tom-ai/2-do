@@ -1,7 +1,7 @@
 const CompletedList = () => {
 	return (
 		<div className="list-div">
-			<h3>Completed 2-Do's</h3>
+			<h2>Completed 2-Do's</h2>
 		</div>
 	);
 };

@@ -1,7 +1,10 @@
-const Input = () => {
+const Input = ({addTodo}) => {
 	return (
 		<div className="input-div">
-			<form action="#" method="POST" id="form">
+			<button onClick={() => {addTodo()}} className="input-text-box">
+					Add
+			</button>
+			{/* <form action="#" method="" id="form">
 				<input
 					className="input-text-box"
 					id="input-text-box"
@@ -9,10 +12,7 @@ const Input = () => {
 					type="text"
 					placeholder="What do you want 2-do today?"
 				></input>
-				<button id="button" type="submit" className="input-text-box">
-					Add
-				</button>
-			</form>
+			</form> */}
 		</div>
 	);
 };
