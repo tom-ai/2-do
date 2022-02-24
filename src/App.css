@@ -1,3 +1,17 @@
-.App {
+.body {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.list-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.list-div {
+  border: 2px solid black;
+  height: 400px;
+  width: 400px;
+  margin: 40px;
 }
