@@ -1,20 +1,21 @@
 // import {addTodo} from "../App"
 
-
-const PendingList = ({addTodo, todos}) => {
-
+const PendingList = ({ addTodo, todos, flipOrder }) => {
 	return (
 		<div className="list-div">
 			<h2>2-Do's</h2>
-			{console.log(todos)}
+			<button
+				onClick={() => {
+					flipOrder();
+				}}
+			>
+				Flip Order
+			</button>
 			<ul>
 				{todos.map((todo, index) => {
-					return (
-						<li key={index}> {todo} </li>
-					)
+					return <li key={index}> {todo} </li>;
 				})}
 			</ul>
-
 		</div>
 	);
 };

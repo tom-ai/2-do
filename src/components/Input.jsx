@@ -1,8 +1,12 @@
-const Input = ({addTodo}) => {
+const Input = ({ addTodo }) => {
 	return (
 		<div className="input-div">
-			<button onClick={() => {addTodo()}} className="input-text-box">
-					Add
+			<button
+				onClick={() => {
+					addTodo();
+				}}
+			>
+				Add
 			</button>
 			{/* <form action="#" method="" id="form">
 				<input
