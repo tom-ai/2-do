@@ -1,6 +1,6 @@
 // import {addTodo} from "../App"
 
-const PendingList = ({ addTodo, todos, flipOrder }) => {
+const PendingList = ({ todos, flipOrder }) => {
 	return (
 		<div className="list-div">
 			<h2>2-Do's</h2>

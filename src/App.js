@@ -7,7 +7,7 @@ import { useState } from "react";
 const form = document.querySelector("form");
 
 function App() {
-	const [todos, setTodos] = useState(["write a list", "brush my teeth"]);
+	const [todos, setTodos] = useState(["write a list", "brush teeth"]);
 
 	const flipOrder = () => {
 		setTodos((currentTodos) => {
@@ -25,7 +25,7 @@ function App() {
 		<div className="body">
 			<Header />
 			<div className="list-container">
-				<PendingList addTodo={addTodo} todos={todos} flipOrder={flipOrder} />
+				<PendingList todos={todos} flipOrder={flipOrder} />
 				<CompletedList />
 			</div>
 			<div className="input-container">
