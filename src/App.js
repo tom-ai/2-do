@@ -15,9 +15,9 @@ function App() {
 		});
 	};
 
-	const addTodo = () => {
+	const addTodo = (item) => {
 		setTodos((currentTodos) => {
-			return ["set an alarm", ...currentTodos];
+			return [item, ...currentTodos];
 		});
 	};
 
