@@ -8,7 +8,6 @@ const form = document.querySelector("form");
 
 function App() {
 	const [todos, setTodos] = useState(["write a list", "brush teeth"]);
-
 	const flipOrder = () => {
 		setTodos((currentTodos) => {
 			return [...currentTodos].reverse();
@@ -21,11 +20,30 @@ function App() {
 		});
 	};
 
+	const deleteItem = (itemToDelete) => {
+		setTodos((currentTodos) => {
+			const filteredTodos = [...currentTodos];
+			return filteredTodos.filter((todo) => todo !== itemToDelete);
+		});
+	};
+
+	const completeItem = (itemToComplete) => {
+		setTodos((currentTodos) => {
+			const filteredTodos = [...currentTodos];
+			return filteredTodos.filter((todo) => todo !== itemToComplete);
+		});
+	};
+
 	return (
 		<div className="body">
 			<Header />
 			<div className="list-container">
-				<PendingList todos={todos} flipOrder={flipOrder} />
+				<PendingList
+					todos={todos}
+					flipOrder={flipOrder}
+					deleteItem={deleteItem}
+					completeItem={completeItem}
+				/>
 				<CompletedList />
 			</div>
 			<div className="input-container">

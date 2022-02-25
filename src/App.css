@@ -9,14 +9,16 @@
 .list-container {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
+	padding: 5px;
 }
 
 .list-div {
 	border: 2px solid black;
+	background-color: lightcyan;
 	height: 400px;
 	width: 400px;
-	margin: 40px;
+	margin: 5px;
+	border-radius: 5px;
 }
 
 .input-container {
@@ -28,9 +30,17 @@
 .input-text-box {
 	height: 40px;
 	padding: 0px;
-	margin-left: 10px;
-	margin-top: 0px;
 	margin-bottom: 0px;
+	border-radius: 5px;
+	background-color: lightcyan;
+}
+
+.list-button {
+	width: 35px;
+	height: 35px;
+	background-color: gold;
+	text-align: center;
+	padding: 0px;
 }
 
 button {
@@ -44,7 +54,28 @@ button {
 }
 
 input {
-	width: 400px;
+	width: 605px;
 	border: 2px solid black;
 	padding-right: 5px;
+}
+
+li {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	list-style: none;
+	margin: 10px;
+	justify-content: space-between;
+	padding: 10px;
+	border: 2px dotted black;
+}
+
+ul {
+	padding: 0px;
+}
+
+#add-todo-button {
+	height: 44px;
+	width: 100px;
+	margin-left: 3px;
 }
