@@ -19,6 +19,7 @@
 	width: 400px;
 	margin: 5px;
 	border-radius: 5px;
+	overflow: auto;
 }
 
 .input-container {

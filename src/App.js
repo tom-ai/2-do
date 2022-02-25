@@ -8,6 +8,8 @@ const form = document.querySelector("form");
 
 function App() {
 	const [todos, setTodos] = useState(["write a list", "brush teeth"]);
+	const [completed, setCompleted] = useState([])
+
 	const flipOrder = () => {
 		setTodos((currentTodos) => {
 			return [...currentTodos].reverse();
@@ -15,12 +17,14 @@ function App() {
 	};
 
 	const addTodo = (item) => {
+		console.log(item)
 		setTodos((currentTodos) => {
 			return [item, ...currentTodos];
 		});
 	};
 
 	const deleteItem = (itemToDelete) => {
+		console.log('IN DELETE ITEM!')
 		setTodos((currentTodos) => {
 			const filteredTodos = [...currentTodos];
 			return filteredTodos.filter((todo) => todo !== itemToDelete);
@@ -28,11 +32,15 @@ function App() {
 	};
 
 	const completeItem = (itemToComplete) => {
-		setTodos((currentTodos) => {
-			const filteredTodos = [...currentTodos];
-			return filteredTodos.filter((todo) => todo !== itemToComplete);
-		});
+		setCompleted((currentCompleted) => {
+			const updatedCompleted = [...currentCompleted]
+			updatedCompleted.push(itemToComplete)
+			deleteItem(itemToComplete)
+			return updatedCompleted
+		})
 	};
+
+	
 
 	return (
 		<div className="body">
@@ -44,7 +52,10 @@ function App() {
 					deleteItem={deleteItem}
 					completeItem={completeItem}
 				/>
-				<CompletedList />
+				<CompletedList
+				completed={completed}
+				addTodo={addTodo}
+				/>
 			</div>
 			<div className="input-container">
 				<Input addTodo={addTodo} />

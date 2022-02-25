@@ -22,6 +22,7 @@ const PendingList = ({ todos, flipOrder, deleteItem, completeItem }) => {
 							<button
 								className="list-button"
 								onClick={() => completeItem(todo)}
+								// onClick={() => deleteItem(todo)}
 							>
 								✅
 							</button>
